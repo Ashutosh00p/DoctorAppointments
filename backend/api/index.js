@@ -4,7 +4,7 @@ const express = require("express");
 
 const cors = require("cors");
 
-const connectDB = require("./config/db");
+const connectDB = require("../config/db");
 
 
 
@@ -38,15 +38,15 @@ app.use(cors({
 
 // --- Routes ---
 
-app.use("/api/auth", require("./routes/auth"));
+app.use("/api/auth", require("../routes/auth"));
 
-app.use("/api/doctor", require("./routes/doctor"));
+app.use("/api/doctor", require("../routes/doctor"));
 
-app.use("/api/appointment", require("./routes/appointment"));
+app.use("/api/appointment", require("../routes/appointment"));
 
 // Naya Contact route yahan add kiya hai
 
-app.use("/api/contact", require("./routes/contactRoutes"));
+app.use("/api/contact", require("../routes/contactRoutes"));
 
 
 
