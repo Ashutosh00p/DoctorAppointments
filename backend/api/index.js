@@ -10,7 +10,7 @@ const connectDB = require("../config/db");
 
 // Connect to MongoDB
 
-connectDB(); 
+ connectDB(); 
 
 
 
@@ -28,7 +28,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(cors({
 
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    origin: true,//process.env.FRONTEND_URL || "http://localhost:5173",
 
     credentials: true
 

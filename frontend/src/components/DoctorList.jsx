@@ -18,7 +18,7 @@ const DoctorList = () => {
   const fetchDoctors = async () => {
     try {
       const API_URL =
-        import.meta.env.VITE_API_URL || "http://localhost:5000";
+        import.meta.env.VITE_API_URL || "";  //"http://localhost:5000";
 
       const res = await axios.get(API_URL + "/api/doctor");
 
