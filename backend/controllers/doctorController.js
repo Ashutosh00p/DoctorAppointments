@@ -1,9 +1,12 @@
 const Doctor = require("../models/Doctor");
 exports.getAllDoctors = async (req, res) => {
  try {
+    
  const doctors = await Doctor.find({});
+ 
  res.status(200).json({ success: true, count: doctors.length, data: doctors });
  } catch (error) {
+     
  res.status(500).json({ success: false, message: error.message });
  }
 };
